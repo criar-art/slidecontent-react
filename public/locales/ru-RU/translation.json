@@ -1,0 +1,19 @@
+{
+  "god_faith": "Вера в Бога",
+  "title": "SlideContentReact",
+  "city": "Ermelino Matarazzo",
+  "slide_infinity": "бесконечный слайд",
+  "slide_no_navigation": "Слайд без навигации",
+  "slide_fix_time": "Слайд продолжительностью 10 секунд",
+  "slide_border": "слайд с рамкой",
+  "slide_squared": "квадратные края скользят",
+  "to_left": "идите налево",
+  "to_right": "Иди направо",
+  "not_found": "404 Не Найдено",
+  "about": "Простой слайд с контентом, разработанный в React.js, с кнопками навигации и таймером в анимации перехода.",
+  "version": "Версия",
+  "nav": {
+    "home": "Начинать",
+    "about": "Информация"
+  }
+}

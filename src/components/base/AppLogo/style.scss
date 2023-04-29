@@ -1,0 +1,22 @@
+.app-logo {
+  color: #2c3e50;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 0;
+    @media (max-width: 640px) {
+      font-size: 1.2em;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .app-logo img { animation: App-logo-spin infinite 20s linear; }
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg);   }
+  to   { transform: rotate(360deg); }
+}

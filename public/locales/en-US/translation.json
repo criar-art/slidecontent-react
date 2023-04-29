@@ -1,0 +1,19 @@
+{
+  "god_faith": "Faith in God",
+  "title": "SlideContentReact",
+  "city": "Ermelino Matarazzo",
+  "slide_infinity": "Slide infinity",
+  "slide_no_navigation": "Slide don't have navigation",
+  "slide_fix_time": "Slide time duration of 10 seconds",
+  "slide_border": "Slide with border",
+  "slide_squared": "Slide with square border",
+  "to_left": "Go to left",
+  "to_right": "Go to right",
+  "not_found": "404 Not Found",
+  "about": "A simple content slide developed in React.js with navigation buttons and a timer in the transition animation",
+  "version": "Version",
+  "nav": {
+    "home": "Home",
+    "about": "Information"
+  }
+}
