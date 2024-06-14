@@ -6,15 +6,12 @@ describe("Should render <App/>", () => {
     render(<App />);
   })
   it('renders titles', () => {
-    const titles = screen.getAllByText(/SlideContentReact/i);
+    const title = screen.getByText(/title/i);
     const slideInfinity = screen.getByText(/slide_infinity/i);
     const slideNavEmpty = screen.getByText(/slide_no_navigation/i);
     const slideTime = screen.getByText(/slide_fix_time/i);
 
-    for(let title of titles) {
-      expect(title.textContent).toContain('SlideContentReact');
-    }
-
+    expect(title).toBeInTheDocument()
     expect(slideInfinity).toBeInTheDocument()
     expect(slideNavEmpty).toBeInTheDocument()
     expect(slideTime).toBeInTheDocument()

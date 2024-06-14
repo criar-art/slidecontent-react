@@ -21,9 +21,9 @@ describe("Should render <AppVersion/>", () => {
     expect(screen.getByTestId('app-version')).toBeInTheDocument();
   });
   it('AppVersion validation version SlideContent', () => {
-    expect(screen.getByTestId('app-version').textContent).toBe(`version SlideContent ${appVersion}`);
+    expect(screen.getByTestId('app-version').textContent).toBe(`SlideContent ${appVersion}`);
   });
   it('AppVersion validation version React', () => {
-    expect(screen.getByTestId('react-version').textContent).toBe(`version React ${reactVersion}`);
+    expect(screen.getByTestId('react-version').textContent).toBe(`React ${reactVersion}`);
   });
 });

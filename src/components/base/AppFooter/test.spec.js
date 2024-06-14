@@ -19,7 +19,7 @@ describe("Should render <AppFooter/>", () => {
 
     const title = screen.getByTestId('app-footer');
 
-    expect(title.querySelector('a').href).toBe('https://github.com/lucasferreiralimax/slidecontent-react')
-    expect(title.querySelector('a').textContent).toBe(`version React ${reactVersion}version SlideContent ${appVersion}SlideContentReact@lucasferreiralimax`)
+    expect(title.querySelector('a').href).toBe('https://github.com/criar-art/slidecontent-react')
+    expect(title.querySelector('a').textContent).toBe(`React ${reactVersion}SlideContent ${appVersion}@lucasferreiralimax`)
   });
 });
