@@ -11,7 +11,6 @@
   "to_right": "向右走",
   "not_found": "404 未找到",
   "about": "用 React.js 开发的简单内容幻灯片，带有导航按钮和过渡动画中的计时器",
-  "version": "版本",
   "nav": {
     "home": "开始",
     "about": "信息"

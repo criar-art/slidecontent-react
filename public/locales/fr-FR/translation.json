@@ -10,7 +10,6 @@
   "to_left": "va à gauche",
   "to_right": "aller à droite",
   "about": "Une diapositive de contenu simple développée dans React.js avec des boutons de navigation et une minuterie dans l'animation de transition",
-  "version": "Version",
   "nav": {
     "home": "Démarrer",
     "about": "Information"

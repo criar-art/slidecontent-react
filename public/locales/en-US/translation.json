@@ -11,7 +11,6 @@
   "to_right": "Go to right",
   "not_found": "404 Not Found",
   "about": "A simple content slide developed in React.js with navigation buttons and a timer in the transition animation",
-  "version": "Version",
   "nav": {
     "home": "Home",
     "about": "Information"
