@@ -8,10 +8,11 @@
   @media (max-width: 640px) {
     flex-direction: column;
   }
+
   a {
     padding: 1rem 1.5rem 1rem 1rem;
     margin: 0.5rem;
-    background: #eee;
+    border: 2px solid #eee;
     color: #2c3e50;
     border-radius: 10px;
     text-decoration: none;
@@ -19,14 +20,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
+    transition: .3s all;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .06), 0 0 0 2px #fff;
+
     @media (max-width: 640px) {
       width: calc(100% - 60px);
     }
+
     &.active {
-      background: #3ea3bf;
-      color: #fff;
-      svg { fill: #fff; }
+      background: #fff;
+      border: 2px solid #3ea3bf;
+      color: #3ea3bf;
+
+      svg {
+        fill: #3ea3bf;
+      }
     }
+
     svg {
       width: 25px;
       margin-right: 0.5rem;

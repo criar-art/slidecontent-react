@@ -1,27 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
-.slide-title, h3 {
+.example {
+  padding-bottom: 6rem;
+  padding-top: 2rem;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .06);
+
+  &:first-of-type {
+    margin-top: 2rem;
+    padding-top: 0;
+    border-top: 1px solid #eee;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .06), 0 -5px 15px rgba(0, 0, 0, .02);
+  }
+}
+
+.slide-title,
+h3 {
   align-items: center;
   display: flex;
   justify-content: center;
-}
 
-.slide-title svg, h3 svg {
-  margin-right: .5em;
+  svg {
+    margin-right: .5em;
+  }
 }
 
 .slide-title {
-  border-top: 3px dashed #ccc;
+  padding: 2rem 0;
   color: #3ea3bf;
   font-size: 2em;
-  margin: 2em 0;
-  padding-top: 2em;
-}
-.slide-title svg { fill: #3ea3bf; }
-.favela h1 { font-family: 'Great Vibes', cursive; }
-.favela img { filter: saturate(2) brightness(1.2); }
+  @media (max-width: 640px) {
+    .slide-title {
+      font-size: 1em;
+    }
+  }
 
-@media (max-width: 640px) {
-  .slide-title { font-size: 1em; }
+  svg {
+    fill: #3ea3bf;
+  }
 }
 
+.favela {
+  h1 {
+    font-family: 'Great Vibes', cursive;
+  }
+
+  img {
+    filter: saturate(2) brightness(1.2);
+  }
+}
