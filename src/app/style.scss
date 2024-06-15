@@ -12,6 +12,10 @@
   --main-color: #2c3e50;
 }
 
+html {
+  background: var(--primary);
+}
+
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -19,6 +23,7 @@ body {
   margin: 0;
   margin: 0;
   padding: 0;
+  background: #fff;
 
   &:before,
   &:after {
