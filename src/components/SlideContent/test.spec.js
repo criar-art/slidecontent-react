@@ -12,8 +12,8 @@ describe("Should render <SlideContent/>", () => {
     render(
       <I18nextProvider i18n={i18n}>
         <SlideContent>
-          <SlideItem title="Ermelino Matarazzo" img={ermelino} url="https://github.com/lucasferreiralimax/slidecontent-react" target="_blank" />
-          <SlideItem title="Fé em Deus" img={faveladascriancas} url="https://github.com/lucasferreiralimax/slidecontent-react" target="_blank" className="favela" />
+          <SlideItem title="Ermelino Matarazzo" img={ermelino} url="https://github.com/criar-art/slidecontent-react" target="_blank" />
+          <SlideItem title="Fé em Deus" img={faveladascriancas} url="https://github.com/criar-art/slidecontent-react" target="_blank" className="favela" />
         </SlideContent>
       </I18nextProvider>
     );
@@ -21,7 +21,7 @@ describe("Should render <SlideContent/>", () => {
     const items = screen.getAllByTestId('link-item');
 
     for(let item of items) {
-      expect(item.href).toBe('https://github.com/lucasferreiralimax/slidecontent-react')
+      expect(item.href).toBe('https://github.com/criar-art/slidecontent-react')
       expect(item.target).toBe('_blank')
       let { alt } = item.querySelector('img')
       if(alt == 'Fé em Deus') {
