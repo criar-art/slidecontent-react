@@ -38,19 +38,19 @@ describe("Should render <About/>", () => {
   });
 
   it('should have correct links with target and rel attributes', () => {
-    const vueLink = screen.getByRole('link', { name: /SlideContent Vue.js/i });
+    const vueLink = screen.getByRole('link', { name: /SlideContentVue/i });
     expect(vueLink).toBeInTheDocument();
     expect(vueLink).toHaveAttribute('href', 'https://slidecontent-vuejs.web.app');
     expect(vueLink).toHaveAttribute('target', '_blank');
     expect(vueLink).toHaveAttribute('rel', 'noopener noreferrer');
 
-    const angularLink = screen.getByRole('link', { name: /SlideContent Angular/i });
+    const angularLink = screen.getByRole('link', { name: /SlideContentAngular/i });
     expect(angularLink).toBeInTheDocument();
     expect(angularLink).toHaveAttribute('href', 'https://slidecontent-angularjs.web.app');
     expect(angularLink).toHaveAttribute('target', '_blank');
     expect(angularLink).toHaveAttribute('rel', 'noopener noreferrer');
 
-    const emberLink = screen.getByRole('link', { name: /SlideContent Ember/i });
+    const emberLink = screen.getByRole('link', { name: /SlideContentEmber/i });
     expect(emberLink).toBeInTheDocument();
     expect(emberLink).toHaveAttribute('href', 'https://slidecontent-reactjs.web.app');
     expect(emberLink).toHaveAttribute('target', '_blank');
