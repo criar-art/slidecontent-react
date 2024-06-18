@@ -21,7 +21,7 @@ function About() {
             width="50"
             alt="Vue.js Logo - Link to SlideContent Vue.js"
           />
-          SlideContent Vue.js
+          SlideContentVue
         </a>
         <a
           href="https://slidecontent-angularjs.web.app"
@@ -34,7 +34,7 @@ function About() {
             width="150"
             alt="Angular Logo - Link to SlideContent Angular"
           />
-          SlideContent Angular
+          SlideContentAngular
         </a>
         <a
           href="https://slidecontent-reactjs.web.app"
@@ -47,7 +47,7 @@ function About() {
             width="80"
             alt="Ember Logo - Link to SlideContent Ember"
           />
-          SlideContent Ember
+          SlideContentEmber
         </a>
       </div>
     </section>

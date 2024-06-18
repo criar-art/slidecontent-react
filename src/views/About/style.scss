@@ -2,15 +2,14 @@
   margin-top: 2rem;
   padding: 4rem;
   border-top: 1px solid #eee;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, .06), 0 -5px 15px rgba(0, 0, 0, .02);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.06), 0 -5px 15px rgba(0, 0, 0, 0.02);
   .examples {
     max-width: 900px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    flex-flow: row wrap;
+    flex-direction: row;
     align-items: stretch;
-    gap: 1rem;
 
     @media (max-width: 640px) {
       flex-direction: column;
@@ -25,25 +24,22 @@
     flex-direction: column;
     padding: 1rem 2rem 2rem;
     border-radius: 10px;
-    margin: 2rem 0.5rem;
+    margin: 2rem 0.5rem 0;
     text-decoration: none;
     color: var(--main-color);
     border: 2px solid #eee;
-    width: 90%;
     font-weight: bold;
-    box-shadow:
-      0 10px 10px rgb(0 0 0 / 6%),
-      0 0 0 2px #fff;
+    box-shadow: 0 10px 10px rgb(0 0 0 / 6%), 0 0 0 2px #fff;
     transition: 0.3s all;
     background: #fff;
 
     &:hover {
       transform: scale(1.1);
     }
-  }
 
-  .example img {
-    height: 80px;
-    margin-bottom: 10px;
+    img {
+      height: 80px;
+      margin-bottom: 10px;
+    }
   }
 }
