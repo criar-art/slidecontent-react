@@ -1,12 +1,55 @@
-import React from 'react';
+import React from "react";
 import { useTranslation } from "react-i18next";
-import './style.scss'
+import "./style.scss";
+
 
 function About() {
   const { t } = useTranslation();
   return (
-    <section className='about' data-testid='view-about'>
-      <p>{t('about')}</p>
+    <section className="about" data-testid="view-about">
+      <p>{t("about")}</p>
+
+      <div className="examples">
+        <a
+          href="https://slidecontent-vuejs.web.app"
+          target="_blank"
+          className="example"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={require("../../assets/logos/logo-vue.svg").default}
+            width="50"
+            alt="Vue.js Logo - Link to SlideContent Vue.js"
+          />
+          SlideContent Vue.js
+        </a>
+        <a
+          href="https://slidecontent-angularjs.web.app"
+          target="_blank"
+          className="example"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={require("../../assets/logos/logo-angular.svg").default}
+            width="150"
+            alt="Angular Logo - Link to SlideContent Angular"
+          />
+          SlideContent Angular
+        </a>
+        <a
+          href="https://slidecontent-reactjs.web.app"
+          target="_blank"
+          className="example"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={require("../../assets/logos/logo-ember.svg").default}
+            width="80"
+            alt="Ember Logo - Link to SlideContent Ember"
+          />
+          SlideContent Ember
+        </a>
+      </div>
     </section>
   );
 }
