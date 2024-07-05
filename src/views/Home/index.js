@@ -5,6 +5,8 @@ import './style.scss';
 
 import faveladascriancas from '../../assets/faveladascriancas.jpg';
 import ermelino from '../../assets/ermelino.jpg';
+import newyork from '../../assets/new-york.jpg';
+import motorcycle from '../../assets/motorcycle.jpg';
 
 import SlideContent from '../../components/SlideContent/index.js';
 import SlideItem from '../../components/SlideItem/index.js';
@@ -32,6 +34,12 @@ function Home() {
           <SlideItem
             title={t('city')}
             img={ermelino}
+          />
+          <SlideItem
+            img={newyork}
+          />
+          <SlideItem
+            img={motorcycle}
           />
         </SlideContent>
       </div>
