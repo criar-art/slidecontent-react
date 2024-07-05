@@ -1,44 +1,40 @@
 /* eslint-disable */
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import './style.scss';
+import "./style.scss";
 
 function SlideContent(props) {
   const { t } = useTranslation();
   const slideContentRef = useRef(null);
   const slideNavigationRef = useRef(null);
+  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+  const [slides, setSlides] = useState([]);
 
   useEffect(() => {
-    let slideAnimationOptions;
     const slideContent = slideContentRef.current;
-    const slides = slideContent.querySelectorAll(".slide-item");
+    const slideItems = slideContent.querySelectorAll(".slide-item");
+    setSlides(slideItems);
+
+    const updateActiveSlide = (index) => {
+      slideItems.forEach((slide, i) => {
+        slide.classList.toggle("actived", i === index);
+      });
+    };
 
     const nextHandler = () => {
-      for (let item of slides) {
-        if (item.classList.contains("actived")) {
-          item.classList.remove("actived");
-          if (item.nextElementSibling) {
-            item.nextElementSibling.classList.add("actived");
-          } else {
-            slides[0].classList.add("actived");
-          }
-          break;
-        }
-      }
+      setActiveSlideIndex((prevIndex) => {
+        const newIndex = (prevIndex + 1) % slideItems.length;
+        updateActiveSlide(newIndex);
+        return newIndex;
+      });
     };
 
     const prevHandler = () => {
-      for (let item of slides) {
-        if (item.classList.contains("actived")) {
-          item.classList.remove("actived");
-          if (item.previousElementSibling) {
-            item.previousElementSibling.classList.add("actived");
-          } else {
-            slides[slides.length - 1].classList.add("actived");
-          }
-          break;
-        }
-      }
+      setActiveSlideIndex((prevIndex) => {
+        const newIndex = (prevIndex - 1 + slideItems.length) % slideItems.length;
+        updateActiveSlide(newIndex);
+        return newIndex;
+      });
     };
 
     let slideAnimationInitial = setInterval(nextHandler, 6000);
@@ -46,7 +42,7 @@ function SlideContent(props) {
     if (props.animation) {
       clearInterval(slideAnimationInitial);
 
-      slideAnimationOptions = setInterval(() => {
+      const slideAnimationOptions = setInterval(() => {
         if (props.animation.direction === "prev") {
           prevHandler();
         } else {
@@ -57,59 +53,82 @@ function SlideContent(props) {
       if (props.animation.disabled) {
         clearInterval(slideAnimationOptions);
       }
+
+      return () => {
+        clearInterval(slideAnimationOptions);
+      };
     }
 
     return () => {
       clearInterval(slideAnimationInitial);
-      clearInterval(slideAnimationOptions);
     };
   }, [props.animation]);
 
   const handlePrevClick = () => {
-    const slides = slideContentRef.current.querySelectorAll(".slide-item");
-    for (let item of slides) {
-      if (item.classList.contains("actived")) {
-        item.classList.remove("actived");
-        if (item.previousElementSibling) {
-          item.previousElementSibling.classList.add("actived");
-        } else {
-          slides[slides.length - 1].classList.add("actived");
-        }
-        break;
-      }
-    }
+    setActiveSlideIndex((prevIndex) => {
+      const newIndex = (prevIndex - 1 + slides.length) % slides.length;
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("actived", i === newIndex);
+      });
+      return newIndex;
+    });
   };
 
   const handleNextClick = () => {
-    const slides = slideContentRef.current.querySelectorAll(".slide-item");
-    for (let item of slides) {
-      if (item.classList.contains("actived")) {
-        item.classList.remove("actived");
-        if (item.nextElementSibling) {
-          item.nextElementSibling.classList.add("actived");
-        } else {
-          slides[0].classList.add("actived");
-        }
-        break;
-      }
-    }
+    setActiveSlideIndex((prevIndex) => {
+      const newIndex = (prevIndex + 1) % slides.length;
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("actived", i === newIndex);
+      });
+      return newIndex;
+    });
+  };
+
+  const bulletHandler = (index) => {
+    setActiveSlideIndex(index);
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("actived", i === index);
+    });
   };
 
   return (
     <section
       id={props.id}
-      className={`slide-content${props.border ? ' border' : ''}${props.squared ? ' squared' : ''}`}
+      className={`slide-content${props.border ? " border" : ""}${
+        props.squared ? " squared" : ""
+      }`}
       ref={slideContentRef}
     >
-      <div className="slide-contents">
-        {props.children}
-      </div>
-      {props.nav === "true" &&
-        <div className="slide-navigation" ref={slideNavigationRef}>
-          <button className="btn prev" type="button" onClick={handlePrevClick}>{t('to_left')}</button>
-          <button className="btn next" type="button" onClick={handleNextClick}>{t('to_right')}</button>
-        </div>
-      }
+      <div className="slide-contents">{props.children}</div>
+      {props.nav === "true" && (
+        <>
+          <div className="slide-navigation" ref={slideNavigationRef}>
+            <button
+              className="btn prev"
+              type="button"
+              onClick={handlePrevClick}
+            >
+              {t("to_left")}
+            </button>
+            <button
+              className="btn next"
+              type="button"
+              onClick={handleNextClick}
+            >
+              {t("to_right")}
+            </button>
+          </div>
+          <div className="slide-bullets">
+            {Array.from({ length: slides.length }).map((_, index) => (
+              <button
+                key={index}
+                className={`bullet ${index === activeSlideIndex ? "active" : ""}`}
+                onClick={() => bulletHandler(index)}
+              ></button>
+            ))}
+          </div>
+        </>
+      )}
     </section>
   );
 }
