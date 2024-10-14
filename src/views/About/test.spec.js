@@ -52,7 +52,7 @@ describe("Should render <About/>", () => {
 
     const emberLink = screen.getByRole('link', { name: /SlideContentEmber/i });
     expect(emberLink).toBeInTheDocument();
-    expect(emberLink).toHaveAttribute('href', 'https://slidecontent-reactjs.web.app');
+    expect(emberLink).toHaveAttribute('href', 'https://slidecontent-ember.web.app');
     expect(emberLink).toHaveAttribute('target', '_blank');
     expect(emberLink).toHaveAttribute('rel', 'noopener noreferrer');
   });
