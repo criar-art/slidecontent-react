@@ -37,7 +37,7 @@ function About() {
           SlideContentAngular
         </a>
         <a
-          href="https://slidecontent-reactjs.web.app"
+          href="https://slidecontent-ember.web.app"
           target="_blank"
           className="example"
           rel="noopener noreferrer"
