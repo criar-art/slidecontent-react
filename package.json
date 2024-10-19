@@ -43,6 +43,6 @@
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",
-    "sass": "^1.80.2"
+    "sass": "^1.80.3"
   }
 }
