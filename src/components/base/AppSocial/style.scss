@@ -1,0 +1,24 @@
+.social-links {
+  max-width: 210px;
+  display: flex;
+  margin: 1rem auto;
+  gap: .4rem;
+  .tech-container figure {
+    width: 90px;
+    height: 90px;
+
+    background: transparent;
+    border: 1px solid var(--vtl-background);
+    border-radius: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: .3s all;
+
+    svg {
+      height: 50px;
+    }
+  }
+}

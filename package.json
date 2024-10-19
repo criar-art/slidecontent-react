@@ -18,7 +18,8 @@
     "react-dom": "^18.3.1",
     "react-i18next": "^15.0.3",
     "react-router-dom": "^6.27.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "react-techs-logos": "^0.1.22"
   },
   "scripts": {
     "start": "react-scripts start",

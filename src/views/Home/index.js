@@ -10,12 +10,14 @@ import motorcycle from '../../assets/motorcycle.jpg';
 
 import SlideContent from '../../components/SlideContent/index.js';
 import SlideItem from '../../components/SlideItem/index.js';
+import AppSocial from '../../components/base/AppSocial/index.js';
 
 function Home() {
   const { t } = useTranslation();
   return (
     <section className='home' data-testid='view-home'>
-      <div className="example">
+      <AppSocial />
+      <div className="example first">
         <h2 className="slide-title">
           <svg width="60px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <path d="M315.712 334.4a236.543 236.543 0 0029.136 18.192l14.784-28.384a204.034 204.034 0 01-25.168-15.744L315.712 334.4z"/>
