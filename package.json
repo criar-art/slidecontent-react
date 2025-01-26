@@ -9,15 +9,15 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.0.1",
-    "@testing-library/user-event": "^14.5.2",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
     "hammerjs": "^2.0.8",
-    "i18next": "^23.16.5",
-    "i18next-http-backend": "^2.6.2",
+    "i18next": "^23.16.8",
+    "i18next-http-backend": "^2.7.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-i18next": "^15.1.1",
-    "react-router-dom": "^6.28.0",
+    "react-i18next": "^15.4.0",
+    "react-router-dom": "^6.28.2",
     "react-scripts": "^5.0.1",
     "react-techs-logos": "^0.1.23"
   },
@@ -44,6 +44,6 @@
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",
-    "sass": "^1.81.0"
+    "sass": "^1.83.4"
   }
 }
